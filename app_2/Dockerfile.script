@@ -1,0 +1,9 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY statistics_script.py .
+
+RUN pip install requests
+
+CMD ["python", "statistics_script.py"]
